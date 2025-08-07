@@ -1,0 +1,54 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pong Neon by Razal-Loop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="header">
+    <img src="https://avatars.githubusercontent.com/Razal-Loop" alt="Razal-Loop Avatar" id="avatar" onerror="this.src='https://ui-avatars.com/api/?name=Razal-Loop&background=0D8ABC&color=fff';">
+    <div>
+      <h1>Pong Neon</h1>
+      <p id="tagline">by <strong>Razal-Loop</strong> &mdash; The Addictive Game Experience!</p>
+    </div>
+  </div>
+  <div id="difficulty-select">
+    <label for="difficulty">Difficulty:</label>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium" selected>Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <button id="start-btn">Start Game</button>
+  </div>
+  <div id="game-container">
+    <canvas id="pongCanvas" width="900" height="550"></canvas>
+    <div id="scoreboard">
+      <div class="score-player">
+        <span class="player-name neon-cyan">Razal-Loop</span>
+        <span id="score-player" class="neon-cyan">0</span>
+      </div>
+      <div class="score-player">
+        <span class="player-name neon-yellow">AI</span>
+        <span id="score-ai" class="neon-yellow">0</span>
+      </div>
+    </div>
+    <div id="leaderboard">
+      <h3>Leaderboard</h3>
+      <ul id="leaderboard-list"></ul>
+    </div>
+    <div id="gameover" style="display:none;">
+      <h2 id="winner-text"></h2>
+      <button id="restart-btn">Restart</button>
+      <p class="details">Player: Razal-Loop &bull; Pong Neon &bull; 2025</p>
+    </div>
+  </div>
+  <!-- Sound effects -->
+  <audio id="snd-bounce" src="https://cdn.pixabay.com/audio/2022/03/15/audio_115b6fae6a.mp3" preload="auto"></audio>
+  <audio id="snd-score" src="https://cdn.pixabay.com/audio/2022/03/15/audio_117b3b7e6c.mp3" preload="auto"></audio>
+  <audio id="snd-powerup" src="https://cdn.pixabay.com/audio/2022/03/15/audio_1144b8d6d6.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
